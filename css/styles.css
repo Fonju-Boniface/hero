@@ -1,0 +1,776 @@
+*{
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    border: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    color: var(--back-wcolor);
+    transition: .3s ease-in-out;
+    user-select: none;
+}
+:root{
+    --orangered-color:purple;
+    --back-wcolor:#fff;
+    --back-bcolor:#181717;
+    --drop-bg:#000000b7;
+
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+body.active{
+    --orangered-color:#ff4500;
+    --back-wcolor:#010112;
+    --drop-bg:#000000e5;
+    --back-bcolor:#fff;
+}
+button, span, a{
+    cursor: pointer;
+}
+textarea, input{
+    cursor: text;
+}
+.Apps{
+    width: 100%;
+    position: relative;
+    align-items: flex-end;
+}
+
+
+html{
+    scroll-behavior: smooth;
+    /* scroll-padding-top: 4rem; */
+}
+i#ToggleBG, i#ToggleSB{
+    color: var(--back-wcolor);
+    background: var(--orangered-color);
+    font-size: 1.2rem;
+    padding: .3rem ;
+    border-radius: .5rem;
+    width: 1.3rem;
+    height: 1.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+i#ToggleBG:hover, i#ToggleSB:hover{
+    transform: rotate(640deg);
+}
+i#ToggleSB{
+    display: none;
+}
+.display{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header{
+    position: relative;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+    /* justify-content: flex-end; */
+    align-items: flex-end;
+    background: url(./images/pexels-cesar-perez-733745\(1\).jpg);
+    background-size: cover;
+    background-position: center;
+}
+.header .nav{
+    justify-content: space-between;
+    width: 100%;
+    /* border-bottom: .1rem solid var(--orangered-color); */
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: var(--back-wcolor);
+    z-index: 10000;
+    height: 4rem;
+    border-bottom: .2rem solid var(--back-bcolor);
+}
+/* section */
+.header .nav a.img{
+    
+    border-radius: 100%;
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: .1rem;
+    margin: .3rem;
+    overflow: hidden;
+}
+.header .nav a.img:hover{
+    outline: .1rem solid var(--orangered-color);
+}
+.header .nav a img{
+    
+    width: 100%;
+}
+.header .nav a:hover img{
+    transform: rotate(720deg);
+}
+
+.header .nav ul{
+    gap: 1rem;
+    padding:0 2rem;
+}
+
+.header .nav ul li{
+    position: relative;
+    padding: .4rem 0;
+}
+.header .nav ul li a{
+    padding-right: .3rem;
+    color: var(--back-bcolor);
+}
+
+.header .nav ul li::before{
+    width: .5rem;
+    height: .2rem;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: .3s ease-in-out;
+    background: var(--orangered-color);
+}
+.header .nav ul li:hover::before{
+    width: 100%;
+    
+}
+.header .nav ul li:hover a{
+    color: var(--orangered-color);
+    letter-spacing: .07rem;
+}
+.navbtns{
+    gap: 1rem;
+    margin-right: 1rem;
+}
+.navbtns .btnN{
+    padding: .5rem 1rem;
+    font-size: 1rem;
+    color: var(--orangered-color);
+    outline: .1rem solid var(--orangered-color);
+    border-radius: .5rem;
+    background: none;
+    overflow: hidden;
+    position: relative;
+    text-transform: capitalize;
+}
+.navbtns .btnN:hover{
+    color: #fff;
+    background: var(--orangered-color);
+
+}
+.navbtns .btnN::before{
+    content: '';
+    background: var(--orangered-color);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    z-index: -1;
+    transition: .3s ease-in-out;
+
+}
+.navbtns .btnN:hover::before{
+    left: 0;
+}
+
+
+.UPDN{
+    gap: 1rem;
+    position: fixed;
+    bottom: 1rem;
+    z-index: 10000;
+}
+.UPDN a{
+    flex-direction: column;
+    background: var(--orangered-color);
+    gap: -1rem;
+    /* transform: rotate(90deg); */
+    padding: 0rem;
+    border-radius: .5rem;
+    
+}
+.UPDN a i:hover{
+    animation: none;
+}
+.UPDN a i:first-child{
+    animation: spa1 1s linear infinite alternate-reverse;
+    background: var(--orangered-color);
+    position: relative;
+    padding: .3rem .1rem;
+    font-size: 1rem;
+    color: white;
+    border-radius: .5rem;
+}
+@keyframes spa1 {
+    0%{
+        bottom: -1rem;
+    }
+    100%{
+        bottom: 1rem;
+    }
+}
+.UPDN a i:last-child{
+    animation: spa2 1s linear infinite alternate-reverse;
+    background: var(--orangered-color);
+    position: relative;
+    padding: .3rem .1rem;
+    font-size: 1rem;
+    color: white;
+    border-radius: .5rem;
+}
+@keyframes spa2 {
+    0%{
+        top: -1rem;
+    }
+    100%{
+        top: 1rem;
+    }
+}
+
+.UPDN a:hover i{
+    animation: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+.header .hero{
+    /* justify-content: center; */
+    flex-direction: column;
+    width:calc(100% - 15rem);
+    background: var(--drop-bg);
+    height:100vh;
+    text-align: center;
+    gap: .5rem;
+}
+.header .hero span, .header .hero h1{
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 700;
+
+}
+.header .hero span b{
+    font-weight: 700;
+    color: var(--orangered-color);
+}
+.header .hero h1{
+    font-size: 2.5rem;
+}
+.header .hero h1 b{
+    color: var(--orangered-color);
+    font-weight: 700;
+}
+.header .hero p{
+    max-width: 25rem;
+    color: #fff;
+}
+.header .hero .btns{
+    gap: 1rem;
+    margin-top: 1rem;
+}
+.header .hero .btns .btn{
+    padding: .5rem 1rem;
+    font-size: 1rem;
+    /* color: #000000e8; */
+    background: none;
+    border-radius: .5rem;
+    overflow: hidden;
+    position: relative;
+    text-transform: capitalize;
+    transition: .3s ease-in-out;
+    color: var(--orangered-color);
+    /* color: white; */
+    outline: .1rem solid var(--orangered-color);
+    z-index: 1;
+}
+.header .hero .btns .btn:first-child{
+    color: var(--orangered-color);
+    background: var(--back-wcolor);
+}
+.header .hero .btns .btn:first-child:hover{
+    color: #fff;
+    background: none;
+}
+.header .hero .btns .btn:last-child{
+    color: var(--back-wcolor);
+    background: var(--orangered-color);
+}
+.header .hero .btns .btn:last-child:hover{
+    background: none;
+    color: #fff;
+} 
+
+
+
+/* MAth sections   =        ============================= */
+.maincComp{
+    /* min-height: 100vh; */
+    padding: 0;
+    padding-top: 4rem ;
+    /* flex-direction: column; */
+    /* gap: 3rem; */
+    width: 100%;
+    justify-content: flex-end;
+    position: relative;
+}
+.navTabs{
+    gap: 1rem;
+    flex-direction: column;
+    position: fixed;
+    justify-content: flex-start;
+    top: 4rem;
+    left: 0;
+    width: 14rem;
+    background: var(--back-wcolor);
+    height: 80vh;
+    border-bottom-right-radius: .5rem;
+    padding: .5rem;
+    padding-top: 2rem;
+    border-top-right-radius: .5rem;
+    border-bottom-right-radius: .5rem;
+    z-index: 10000;
+}
+/* .navTabs::before{
+    content: '';
+    position: absolute;
+    right: -1.5rem;
+    top: -1px;
+    background: transparent;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 100%;
+    box-shadow:  -4px  -10px  1px #fff;
+    transform: rotate(-20deg);
+} */
+.navTabs .tab-links{
+    padding: .5rem 1.2rem ;
+    width: 70%;
+    font-size: 1rem;
+    text-align: center;
+    border-radius: .5rem;
+    background: var(--back-bcolor);
+}
+
+.navTabs .tab-links:hover{
+    background: var(--back-bcolor);
+}
+.navTabs .active-tab{
+    background: var(--orangered-color);
+}
+
+
+
+.Components{
+    width: calc(100% - 15rem) ;
+    /* width: 100% ; */
+    background: var(--back-bcolor);
+    flex-direction: column;
+    gap: 2rem;
+    position: relative;
+
+}
+
+.Components .math-content{
+    width: 100%;
+    min-height: 100vh;
+    display: none;
+}
+.Components .Active-math-content{
+    display: flex;
+    animation: shopActive .5s linear ;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    transform: scale(0);
+}
+@keyframes shopActive {
+    0%{
+        opacity: 0;
+        transform: scale(0);
+        
+    }
+    
+    100%{
+        opacity: 1;;
+        transform: scale(1);
+        
+    }
+}
+
+.Components .math-content h1{
+    font-size: 2rem;
+    font-weight: bolder;
+    text-transform: capitalize;
+}
+.Components .math-content h1 b, .Form h3 b{
+    color: var(--orangered-color);
+    position: relative;
+}
+.Components .math-content h1 b::before{
+    position: absolute;
+    content: '';
+    bottom: -.6rem;
+    width: 100%;
+    height: .1rem;
+    background: var(--back-wcolor);
+    z-index: 1;
+}
+/* ================= Mark calculator code */
+#MarksCalc, #mmM{
+    gap: 2rem;
+}
+
+/* Form CSS */
+#MarksCalc,#mmM, .Form .Intcontrol{
+    flex-direction: column;
+}
+
+.Form{
+    gap: 1rem;
+    padding: 1rem;
+    background: var(--drop-bg);
+    border-radius: .5rem;
+    width: calc(20rem * 2);
+    flex-wrap: wrap;
+    position: relative;
+    overflow: hidden;
+}
+
+.Form::before{
+    border-radius: .5rem;
+    content: '';
+    position: absolute;
+    top: -100%;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--drop-bg);
+}
+.ActiveForm::before{
+    top: 0; 
+}
+
+.Form h3{
+    font-size: 1.2rem;
+    font-weight: 800;
+    margin: 1rem;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+}
+.Form .Intcontrol{
+    align-items: flex-start;
+    gap: .2rem;
+    width: 40%;
+}
+.Form .Intcontrol label{
+    color:#fff;
+    text-transform: capitalize;
+}
+.Form .Intcontrol input{
+    border: .1px solid #fff;
+    border-radius: .5rem;
+    padding: .5rem .3rem .5rem 1rem;
+    width: 15rem;
+    font-size: large;
+    background: none;
+    color: #fff;
+}
+
+.Form .Intcontrol input:hover, .Form .Intcontrol input:focus, .Form .grades span input:hover, .Form .grades span input:focus{
+    border: .1px solid var(--orangered-color);
+    background: var(--orangered-color);
+    
+}
+.Form .grades{
+    width: 15rem;
+    flex-wrap: wrap;
+    gap: .5rem;
+}
+.Form .grades span{
+    flex-direction: column;
+    gap: .3rem;
+}
+.Form .grades span label{
+    color: #ffff;
+}
+.Form .grades span input{
+    border: .1px solid #fff;
+    border-radius: .5rem;
+    padding: .3rem;
+    width: 1.5rem;
+    font-size: large;
+    background: none;
+    color: #fff;
+    
+}
+.Form .grades span:last-child label, .Form .grades span:last-child input{
+    color: #ff0000;
+}
+.Form .grades span:last-child input:hover, .Form .grades span:last-child input:focus{
+    color: #ff0000;
+    border: .1px solid #ff0000;
+    background: var(--back-wcolor);
+}
+.Form button[type="submit"]{
+    width: 80%;
+    border-radius: .5rem;
+    padding: .5rem;
+    font-size: x-large;
+    background: var(--back-wcolor);
+    color: var(--orangered-color);
+    outline:  .1rem solid var(--orangered-color);
+}
+.Form button.ActiveMBTN{
+    background: red;
+    animation: Ani 1s linear;
+    animation-fill-mode: forwards;
+    color: #fff;
+}
+@keyframes Ani {
+    0%{
+        background: red;
+        color: #fff;
+        
+    }
+    100%{
+        background: var(--orangered-color);
+        color: #fff;
+
+    }
+}
+.Form button[type="submit"]:hover{
+    background: var(--orangered-color);
+    color: #fff;
+}
+/* TABLE CSS */
+
+#TableResult{
+    background: var(--back-bcolor);
+    padding: 1rem;
+   width: calc(100% - 2rem);
+   height: 100%;
+    border-radius: .5rem;
+    position: absolute;
+    z-index: 2;
+    transform: scale(0);
+    flex-direction: column;
+    
+}
+
+#TableResult.Activetable{
+    transform: scale(1);
+
+}
+
+#TableResult ul{
+    flex-direction: column;
+    align-items: flex-start;
+}
+#TableResult ul li{
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--orangered-color);
+    padding: 0.2rem .5rem;
+    background: var(--back-bcolor);
+    /* border-right: .1rem solid var(--orangered-color); */
+    padding: .5rem;
+    align-items: flex-start;
+    gap: 1rem;
+    min-width: 5rem;
+    
+}
+
+#TableResult ul li b:first-child{
+    color: var(--orangered-color);
+}
+#TableResult ul li:nth-child(6) b,
+#TableResult ul li:nth-child(7) b,
+#TableResult ul li:nth-child(8) b{
+    color: rebeccapurple;
+}
+#TableResult ul li:nth-child(6) b:last-child,
+#TableResult ul li:nth-child(7) b:last-child,
+#TableResult ul li:nth-child(8) b:last-child{
+    color: var(--back-wcolor);
+}
+
+
+.DoneBtn{
+    width: 100%;
+    margin-top: 2rem;
+    background: none;
+}
+.DoneBtn #Done{
+    background: var(--orangered-color);
+    color: var(--back-wcolor);
+    padding: .5rem 2rem;
+    border-radius: .5rem;
+    width: fit-content;
+    text-align: center;
+    font-size: 1.1rem;
+}
+.DoneBtn #Done:hover{
+    color: var(--orangered-color);
+    background: var(--back-wcolor);
+}
+.btnsRes{
+    gap: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer.footer{
+    min-height: 100vh;
+    width: 100%;
+}
+
+input[type="text"]{
+    text-transform: capitalize;
+}
+
+/* input.number-to-text{
+    -webkit-appearance: textfield;
+    margin: 0;
+} */
+
+
+
+input.number-to-text{
+    text-align: center;
+    -moz-appearance: textfield;
+    margin: 0;
+    
+}
+.number-to-text::-webkit-outer-spin-button,
+.number-to-text::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+.openNTabs{
+    position: fixed;
+    bottom: 0;
+    padding: .5rem 1rem;
+    font-size: 1.1rem;
+    background: #ff0000;
+    color: #fff;
+    display: none;
+}
+
+
+@media screen and (max-width: 970px){
+    .Components .math-content,.Form .Intcontrol, .Form .Intcontrol input{
+        width: 80%;
+        align-items: center;
+    }
+    .navTabs{
+        left: -15rem;
+    }
+    
+    .Form{
+        width: 100%;
+    }
+
+    .header .nav ul{
+        position: absolute;
+        right: -100%;
+        flex-direction: column;
+        top: 52px;
+        background: var(--back-wcolor);
+        align-items: flex-start;
+        padding: .5rem 1rem;
+        /* border-left: .1rem solid var(--orangered-color); */
+        /* border-top: .1rem solid var(--orangered-color); */
+        /* border-bottom: .1rem solid var(--orangered-color); */
+        border-bottom-left-radius: .5rem;
+        
+    }
+    .header .nav ul.active{
+        right: 0;
+    }
+    .header .hero, .Components{
+        width: 100%;
+    }
+    i#ToggleSB{
+        display: flex;
+    }
+    .openNTabs{
+        display: flex;
+    }
+    .active-navTabs{
+        left: 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 919px){
+    
+}

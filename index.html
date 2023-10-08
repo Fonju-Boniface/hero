@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="widspan=device-widspan, initial-scale=1.0">
+    <title>My Hero Section</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+    <!-- header section =================================> -->
+
+    <header id="header" class="header display">
+        <!-- header nav bar ===============> -->
+
+        <div class="nav display">
+            <a href="#" class="img display">
+                <img src="./images/237Logo.png" alt="">
+            </a>
+            <ul id="Navul" class="display">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#Apps">Apps</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Help</a></li>
+            </ul>
+            <div class="navbtns display">
+                <button class="btnN">sign in</button>
+                <button class="btnN">sign up</button>
+                <i id="ToggleBG" class="fas fa-sun"></i>
+                <i id="ToggleSB" class="fas fa-bars"></i>
+            </div>
+
+        </div>
+        <!-- header hero section ===============> -->
+
+        <div class="hero display">
+            <span>lockcode <b>+237</b>developers </span>
+            <h1><b>You can </b>help <br> make a difference.</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam repudiandae molestias corporis sint ad
+                nobis, harum autem consequuntur quas eligendi, assumenda eveniet non dolores earum.</p>
+
+            <div class="btns display">
+                <button class="btn">Learn more</button>
+                <button class="btn">Donate now</button>
+            </div>
+        </div>
+        <!-- header up and down btns ===============> -->
+
+        <div class="UPDN display">
+            <a class="" href="#header">
+                <i class="fas fa-arrow-up"></i>
+                <i class="fas fa-arrow-up"></i>
+            </a>
+            <a class="" href="#Footer">
+                <i class="fas fa-arrow-down"></i>
+                <i class="fas fa-arrow-down"></i>
+
+            </a>
+        </div>
+    </header>
+
+    <!-- Services section =================================> -->
+
+    <section id="Apps" class="maincComp display">
+        <div class="navTabs display" id="navTabs">
+            <a class="tab-links active-tab" onclick="openMath('MarksCalc')">Marks Calc</a>
+
+            <a class="tab-links" onclick="openMath('mmM')">mm - m <> </a>
+
+            <a class="tab-links" onclick="openMath('Gkg')"> g - kg <></a>
+
+            <a class="tab-links" onclick="openMath('CMM')">cm - m <></a>
+
+            <a class="tab-links" onclick="openMath('PXRem')">px - rem <></a>
+
+            <a class="tab-links" onclick="openMath('AgeCalc')">Age Calc</a>
+        </div>
+        <div class="Components display">
+
+            <div class="math-content display Active-math-content" id="MarksCalc">
+                <h1><b>my Marks </b>Calculator</h1>
+
+                <form class="Form display" id="Marksform">
+                    <h3>Fill in the 
+                        <b>blanks appropriately!</b>
+                    </h3>
+
+                    <div class="Intcontrol display">
+                        <label for="StudentName">Student Name</label>
+                        <input id="StudentName" type="text" maxlengspan="8">
+                    </div>
+                    <div class="Intcontrol display">
+                        <label for="StudentScore">Student Score</label>
+                        <input id="StudentScore" type="number" class="number-to-text">
+                    </div>
+                    <div class="Intcontrol display">
+                        <label for="SubjectName"> Subject Name</label>
+                        <input id="SubjectName" type="text" maxlengspan="8">
+                    </div>
+                    <div class="Intcontrol display">
+                        <label for="SubjectScore"> old total Subject Score</label>
+                        <input id="SubjectScore" type="number"  class="number-to-text">
+                    </div>
+                    <div class="Intcontrol display">
+                        <label for="NewSubjectScore">New to total Subject Score</label>
+                        <input id="NewSubjectScore" type="number"  class="number-to-text">
+                    </div>
+                    
+                    <div class="grades display">
+                        <span class="display">
+                            <label for="gradeA">A</label>
+                            <input id="gradeA" type="number"  class="number-to-text">
+                        </span>
+                        <span class="display">
+                            <label for="gradeB">B</label>
+                            <input id="gradeB" type="number"  class="number-to-text">
+                        </span>
+                        <span class="display">
+                            <label for="gradeC">C</label>
+                            <input id="gradeC" type="number"  class="number-to-text">
+                        </span>
+                        <span class="display">
+                            <label for="gradeD">D</label>
+                            <input id="gradeD" type="number"  class="number-to-text">
+                        </span>
+                        <span class="display">
+                            <label for="gradeE">E</label>
+                            <input id="gradeE" type="number"  class="number-to-text">
+                        </span>
+                    </div>
+
+                    <button id="MKFoBtn" type="submit">Calculate Marks</button>
+
+                </form>
+                
+                
+                <!-- Result Table -->
+
+                <div id="TableResult" class="display">
+                    
+                    <ul class="display">
+                        <li class="display">
+                            <b>Student Name</b>
+                            <b id="ReStName"></b>
+                        </li>
+                        <li class="display">
+                            <b>Subject Name</b>
+                            <b id="ReSubName"></b>
+                            
+                        </li>
+                        <li class="display">
+                            <b>Student Score</b>
+                            <b id="ReStScore"></b>
+                        </li>
+                        <li class="display">
+                            <b>Initial Subject Score</b>
+                            <b id="ReInSubScore"></b>
+                            
+                        </li>
+                        <li class="display">
+                            <b>New Subject Score</b>
+                            <b id="ReNewSubScore"></b>
+                            
+                        </li>
+                        <li class="display">
+                            <b> Student New Score</b>
+                            <b id="NewStScore"></b>
+
+                        </li>
+                        <li class="display">
+                            <b>Grade</b>
+                            <b id="StGrade"></b>
+
+                        </li>
+                        <li class="display">
+                            <b>Result</b>
+                            <b id="StResult"></b>
+
+                        </li>
+                    </ul>
+                    <div class="btnsRes display">
+                        <button id="DoneBtn" class="DoneBtn display">
+                            <span id="Done"> Done</span>
+                        </button>
+                        <button id="EditBtn" class="DoneBtn display">
+                            <span id="Done">Edit</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="math-content display" id="mmM">
+                <h1>Convert from Meters to Millimeters and Reverse</h1>
+                
+                <div class="Form display">
+                    <h3>Fill in the 
+                        <b>blanks appropriately!</b>
+                    </h3>
+
+                    <div class="Intcontrol display">
+                        <label for="Millimeters">Millimeters</label>
+                        <input id="Millimeters" type="number" class="number-to-text">
+                    </div>
+                    <div class="Intcontrol display">
+                        <label for="Centimeters">Centimeters</label>
+                        <input id="Centimeters" type="number" class="number-to-text">
+                    </div>
+                    <div class="Intcontrol display">
+                        <label for="Inches">Inches</label>
+                        <input id="Inches" type="number" class="number-to-text">
+                    </div>
+                    <div class="Intcontrol display">
+                        <label for="Decimeters">Decimeters</label>
+                        <input id="Decimeters" type="number" class="number-to-text">
+                    </div>
+                    <div class="Intcontrol display">
+                        <label for="Meters">Meters</label>
+                        <input id="MetersO" type="number" class="number-to-text">
+                    </div>
+                    <div class="Intcontrol display">
+                        <label for="Decameters">Decameters</label>
+                        <input id="Decameters" type="number" class="number-to-text">
+                    </div>
+                    <div class="Intcontrol display">
+                        <label for="Hectometers">Hectometers</label>
+                        <input id="Hectometers" type="number" class="number-to-text">
+                    </div>
+                    <div class="Intcontrol display">
+                        <label for="Kilometers">Kilometers</label>
+                        <input id="Kilometers" type="number" class="number-to-text">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="math-content display" id="Gkg">
+                <h1>my g - kg content</h1>
+            </div>
+            <div class="math-content display" id="CMM">
+                <h1>my cm - m content</h1>
+            </div>
+            <div class="math-content display" id="PXRem">
+                <h1>my px - rem content</h1>
+            </div>
+            <div class="math-content display" id="AgeCalc">
+                <h1>my Age Calc content</h1>
+            </div>
+        </div>
+    </section>
+
+    <button id="openNTabs" class="openNTabs">Open Nav-Tabs</button>
+    <!-- footer section =================================> -->
+
+    <footer id="Footer" class="section footer">
+        <h1>footer</h1>
+    </footer>
+    <script src="./js/MarkCl.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/tab.js"></script>
+</body>
+
+</html>

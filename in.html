@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="Para"></p>
+    <input type="number" id="inputOn" placeholder="Num 3">
+    <input type="number" id="inputTw" placeholder="Num 2">
+    <span id="RunMe">Click Me</span>
+    <script>
+        setInterval(() => {
+            
+            var inputOn = document.getElementById("inputOn")
+            var inputTw = document.getElementById("inputTw")
+            var Para = document.getElementById("Para")
+            var RunMe = document.getElementById("RunMe")
+    
+           
+                // Para.innerHTML = inputOn.value + " and " + inputTw.value
+                if (inputOn.value > 9) {
+                    Para.innerHTML = inputOn.value + " greater " + inputTw.value
+                    return
+                } 
+                    Para.innerHTML = inputOn.value + " lessthan " + inputTw.value
+        });
+
+    </script>
+</body>
+</html>
